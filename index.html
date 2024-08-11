@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- This is where we'll link our CSS -->
+</head>
+<body>
+    <header>
+        <h1>Testing YouTube Downloader</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form id="download-form">
+                <label for="url">Enter YouTube URL</label>
+                <input type="text" id="url" name="link" required>
+                <button type="submit">Download</button>
+            </form>
+            
+            <div class="info-box">
+                <p>YouTube downloaders are tools or software designed to allow users to save videos from YouTube to their local devices. These tools can be useful for various reasons, including offline viewing, archiving content, or extracting specific media elements for educational or professional use. However, it's crucial to understand both the benefits and the potential issues surrounding their use.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 YouTube Downloader. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('download-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData(event.target);
+            const response = await fetch('http://localhost:8000/download', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Response:', result);
+            } else {
+                console.error('Error:', response.statusText);
+            }
+        });
+    </script>
+</body>
+</html>

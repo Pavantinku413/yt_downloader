@@ -1,0 +1,98 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    text-align: center; /* Center align the content inside header */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: rgb(255, 251, 251);
+    text-decoration: none;
+}
+
+/* Styling the container with glow effect */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #000000;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7); /* Add glow effect */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff; /* Change label text color to white */
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 9px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #000000; /* Change input text color to white */
+    background-color: #ffffff; /* Optional: change background color to match theme */
+}
+
+button {
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    background-color: #007BFF;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Styling the info box with glow effect */
+.info-box {
+    border: 1px solid #007BFF;
+    background-color: #e7f3ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #333; /* Change text color */
+    font-family: 'Arial', sans-serif; /* Change font family */
+    font-size: 16px; /* Change font size */
+    font-weight: bold; /* Make text bold */
+    text-align: center; /* Center align text */
+    line-height: 1.5; /* Adjust line height for better readability */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add glow effect */
+}
